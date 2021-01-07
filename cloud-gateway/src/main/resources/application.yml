@@ -11,11 +11,11 @@ spring:
         - id: event-service
           uri: lb://EVENT-SERVICE
           predicates:
-            - Path=/event/**
+            - Path=/events/**
         - id: post-service
           uri: lb://POST-SERVICE
           predicates:
-            - Path=/post/**
+            - Path=/posts/**
         - id: provider-service
           uri: lb://PROVIDER-SERVICE
           predicates:
