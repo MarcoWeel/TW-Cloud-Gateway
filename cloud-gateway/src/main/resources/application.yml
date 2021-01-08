@@ -3,17 +3,6 @@ spring:
     name: GATEWAY-SERVICE
   cloud:
     gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "*"
-            setAllowedHeaders: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
-
       routes:
         - id: loadout-service
           uri: lb://LOADOUT-SERVICE
@@ -49,4 +38,4 @@ eureka:
     service-url:
       defaultZone: http://84.86.167.197:8761/eureka/
   instance:
-    hostname: localhost
+    hostname: 84.86.167.197
