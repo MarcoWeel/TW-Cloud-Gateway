@@ -7,11 +7,13 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins: "*"
+            setAllowedHeaders: "*"
             allowedMethods:
               - GET
               - POST
               - PUT
               - DELETE
+
       routes:
         - id: loadout-service
           uri: lb://LOADOUT-SERVICE
